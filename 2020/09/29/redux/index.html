@@ -29,12 +29,12 @@
 <meta name="description" content="" >
 
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2020/09/29/redux/">
 
 
 
   <title>
-归档 |
+redux |
 CQ21567 = My Heart</title>
 <meta name="generator" content="Hexo 5.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -62,8 +62,19 @@ CQ21567 = My Heart</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">归档
+  <h1 itemprop="name headline">redux
   </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-09-29 20:13:59">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-09-29T20:13:59+08:00">2020-09-29</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -93,12 +104,12 @@ CQ21567 = My Heart</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -119,40 +130,132 @@ CQ21567 = My Heart</title>
       <div class="inner">
         <div id="content" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/">首页</a> <small>/</small>
-          目前共计 5 篇文章。 <small class="cheers">嗯.. 继续努力。</small>
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
 
-          <h3 class="item section">
-            <a href="/archives/2020">2020 年</a><small>/</small><a href="/archives/2020/09">09 月</a>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/29/redux/">
 
-      
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="CQ">
+    <meta itemprop="description" content=", ">
+  </span>
 
-      
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="My Heart">
+  </span>
 
-      
+  <div class="body md" itemprop="articleBody">
+    
 
-      
+    <h3 id="REDUX"><a href="#REDUX" class="headerlink" title="REDUX"></a>REDUX</h3><p>1、redux是一个全局状态管理工具。他可以个任何一个框架进行结合使用，不一定是react。但是react主要是针对视图层操作的，用来展示内容的，和redux结合使用会更方便一些。</p>
+<p>2、单向数据流：数据是单向流动的。我们在view中通过dispatch派发一个action来改变数据，数据改变之后视图重新渲染</p>
+<p>3、Redux中：<br>(1)state：是用来存储数据的<br>(2)action：是用来组织数据的，每一个action都必须包含一个type属性，表示数据以什么            形式进行改变。action是一个简单的对象。如果我们要改变数据只能通过                dispatch派发一个action实现<br>(3)reducer：用来改变state，所有的数据改变都需要在reducer中进行。是一个function，            接收两个参数<br>参数一 state的初始值<br>参数二 action<br>需要有一个返回值表示新的state数据</p>
+<p>4、createStore用来创建redux<br>combineReducers可以把多个reducer合并成一个<br>Import {createStore,combineReducers,compose,applyMiddleware} from “redux”;<br>5、dispatch</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dispatch（）&#123;</span><br><span class="line">type:</span><br><span class="line">payload:&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当我们使用了redux-thunk插件之后<br> 插件会判断当前我们dispatch派发的内容<br> 如果是一个对象  直接进行dispatch<br>    如果不是，name会把dispatch当做参数传递到function颞部执行<br>    执行完成之后再在function中进行派发<br>  redux-thunk的代码只有几十行<br>dispatch派发一个action<br> 执行dispatch之后所有的reducer都会执行一遍<br> 根据当前的action中的type属性判断是如何改变state数据</p>
+<p>6、connect的作用是吧redux中的数据映射到组件的属性上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; connect &#125; from &quot;react-redux&quot;;</span><br></pre></td></tr></table></figure>
+<p>connect是一个高阶组件的应用形式<br>  通过connect方法可以把redux中的state映射到组件的属性上<br>  同时还会吧dispatch方法映射到属性上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export default connect(mapStateToProps)(App);</span><br></pre></td></tr></table></figure>
 
-      
-        <small>( 5 )</small>
-      </h3>
+<p>7、解决异步action的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import thunk from &quot;redux-thunk&quot;;</span><br></pre></td></tr></table></figure>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-09-29 20:21:22" itemprop="dateModified" datetime="2020-09-29T20:21:22+08:00">2020-09-29</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="CQ 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="CQ 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="CQ 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>CQ <i class="ic i-at"><em>@</em></i>My Heart
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2020/09/29/redux/" title="redux">http://example.com/2020/09/29/redux/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="nav">
+    <div class="item left">
+      
+
+  <a href="/2020/09/29/react/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuja1j1j20zk0m8kjl.jpg" title="react">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>react</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments" data-id="2020/09/29/redux/"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#REDUX"><span class="toc-number">1.</span> <span class="toc-text">REDUX</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -228,6 +331,7 @@ CQ21567 = My Heart</title>
   </ul>
 </div>
 
+
         </div>
         <div class="dimmer"></div>
       </div>
@@ -239,6 +343,15 @@ CQ21567 = My Heart</title>
 <div class="rpost pjax">
   <h2>随机文章</h2>
   <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/29/redux/" title="redux">redux</a></span>
+  </li>
+
       
   <li class="item">
     
@@ -275,15 +388,6 @@ CQ21567 = My Heart</title>
     <span><a href="/2020/09/29/react/" title="react">react</a></span>
   </li>
 
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/09/29/redux/" title="redux">redux</a></span>
-  </li>
-
   </ul>
 </div>
 <div id="rcomment">
@@ -311,7 +415,7 @@ CQ21567 = My Heart</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'http://example.com/archives/',
+    path: 'http://example.com/2020/09/29/redux/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
@@ -320,7 +424,8 @@ CQ21567 = My Heart</title>
       placeholder: "文章搜索",
       empty: "关于 ${query} ，什么也没搜到",
       stats: "${time} ms 内找到 ${hits} 条结果"
-    },copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    },
+    valine: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
     ignores : [
       function(uri) {
         return uri.includes('#');
