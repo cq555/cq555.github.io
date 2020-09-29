@@ -71,9 +71,9 @@
 
         <section id="main">
   
-    <article id="post-huzhuang" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-express" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/29/huzhuang/" class="article-date">
+    <a href="/2020/09/29/express/" class="article-date">
   <time class="post-time" datetime="2020-09-29T01:14:37.000Z" itemprop="datePublished">
     <span class="post-month">9月</span><br/>
     <span class="post-day">29</span>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/29/huzhuang/">huzhuang</a>
+      <a class="article-title" href="/2020/09/29/express/">express</a>
     </h1>
   
 
@@ -103,12 +103,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="虎状儿"><a href="#虎状儿" class="headerlink" title="虎状儿"></a>虎状儿</h3><p>一个憨憨</p>
+        <h3 id="可以使服务器跨域"><a href="#可以使服务器跨域" class="headerlink" title="可以使服务器跨域"></a>可以使服务器跨域</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app.all(&quot;*&quot;,function(req,res,next)&#123;</span><br><span class="line">	&#x2F;&#x2F;设置允许跨域的域名，*代表允许任意域名跨域</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Origin&quot;,req.headers.origin||&#39;*&#39;);</span><br><span class="line">	&#x2F;&#x2F;允许的header类型</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Headers&quot;,&quot;Content-Type,Authorization,X-Requested-With&quot;);</span><br><span class="line">	&#x2F;&#x2F;	&#x2F;&#x2F;跨域允许的请求方式</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Methods&quot;,&quot;PUT,POST,GET,DELETE,OPTIONS&quot;);</span><br><span class="line">	&#x2F;&#x2F;	可以带cookies</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Credentials&quot;,true);</span><br><span class="line">	if(req.method&#x3D;&#x3D;&#39;OPTIONS&#39;)&#123;</span><br><span class="line">	res.sendStatus(200);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	next();</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/29/huzhuang/" data-id="ckfn9s3tz0001ac569mszclj0" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2020/09/29/express/" data-id="ckfncerrb000194564o5s7qix" class="article-share-link">分享</a>
       
       
     </footer>
@@ -162,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/28/vueapp/" data-id="ckfn9s3uw0004ac56gd2affgg" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2020/09/28/vueapp/" data-id="ckfncers800049456b8qo8ni6" class="article-share-link">分享</a>
       
       
     </footer>
@@ -223,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/25/hello-world/" data-id="ckfn9s3u40003ac56ejzi1dk2" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2020/09/25/hello-world/" data-id="ckfncers60003945680xib8iw" class="article-share-link">分享</a>
       
       
     </footer>
