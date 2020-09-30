@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>express</title>
+    <url>/2020/09/29/express/</url>
+    <content><![CDATA[<h3 id="可以使服务器跨域"><a href="#可以使服务器跨域" class="headerlink" title="可以使服务器跨域"></a>可以使服务器跨域</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app.all(&quot;*&quot;,function(req,res,next)&#123;</span><br><span class="line">	&#x2F;&#x2F;设置允许跨域的域名，*代表允许任意域名跨域</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Origin&quot;,req.headers.origin||&#39;*&#39;);</span><br><span class="line">	&#x2F;&#x2F;允许的header类型</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Headers&quot;,&quot;Content-Type,Authorization,X-Requested-With&quot;);</span><br><span class="line">	&#x2F;&#x2F;	&#x2F;&#x2F;跨域允许的请求方式</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Methods&quot;,&quot;PUT,POST,GET,DELETE,OPTIONS&quot;);</span><br><span class="line">	&#x2F;&#x2F;	可以带cookies</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Credentials&quot;,true);</span><br><span class="line">	if(req.method&#x3D;&#x3D;&#39;OPTIONS&#39;)&#123;</span><br><span class="line">	res.sendStatus(200);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	next();</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/09/25/hello-world/</url>
     <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p>
@@ -19,12 +28,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>express</title>
-    <url>/2020/09/29/express/</url>
-    <content><![CDATA[<h3 id="可以使服务器跨域"><a href="#可以使服务器跨域" class="headerlink" title="可以使服务器跨域"></a>可以使服务器跨域</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app.all(&quot;*&quot;,function(req,res,next)&#123;</span><br><span class="line">	&#x2F;&#x2F;设置允许跨域的域名，*代表允许任意域名跨域</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Origin&quot;,req.headers.origin||&#39;*&#39;);</span><br><span class="line">	&#x2F;&#x2F;允许的header类型</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Headers&quot;,&quot;Content-Type,Authorization,X-Requested-With&quot;);</span><br><span class="line">	&#x2F;&#x2F;	&#x2F;&#x2F;跨域允许的请求方式</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Methods&quot;,&quot;PUT,POST,GET,DELETE,OPTIONS&quot;);</span><br><span class="line">	&#x2F;&#x2F;	可以带cookies</span><br><span class="line">	res.header(&quot;Access-Control-Allow-Credentials&quot;,true);</span><br><span class="line">	if(req.method&#x3D;&#x3D;&#39;OPTIONS&#39;)&#123;</span><br><span class="line">	res.sendStatus(200);</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">	next();</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>redux</title>
     <url>/2020/09/29/redux/</url>
     <content><![CDATA[<h3 id="REDUX"><a href="#REDUX" class="headerlink" title="REDUX"></a>REDUX</h3><p>1、redux是一个全局状态管理工具。他可以个任何一个框架进行结合使用，不一定是react。但是react主要是针对视图层操作的，用来展示内容的，和redux结合使用会更方便一些。</p>
@@ -40,6 +43,9 @@
 
 <p>7、解决异步action的问题</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import thunk from &quot;redux-thunk&quot;;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
   </entry>
   <entry>
     <title>react</title>
@@ -53,6 +59,9 @@
 
 <h4 id="通过-extends-继承在-Component-实现一个组件"><a href="#通过-extends-继承在-Component-实现一个组件" class="headerlink" title="通过 extends 继承在 Component 实现一个组件"></a>通过 extends 继承在 Component 实现一个组件</h4><p>每一个组件都需要有一个 render<br>此方法返回的是当前组件显示的内容</p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
   </entry>
   <entry>
     <title>VUE知识点</title>
@@ -64,5 +73,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;meta name=<span class="string">&quot;referrer&quot;</span> content=<span class="string">&quot;no-referrer&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
 <p>  请求资源时不把我的当前的主机信息传递给服务器<br>vue是一个前端渐进式的mvvm开发框架。<br>mvvm是一种开发模式，分为三块内容:model view view-model<br>model是用来存储数据的<br>view是用来展示数据的<br>view-model是视图模型层，用来对数据和视图进行双向绑定的<br>（1）v-model（可以加修饰符）<br>作用是把data中的数据和html页面中的form表单项做关联<br>v-model.trim  去空格<br>（2）事件绑定使用@或者v-on<br>@keyup=“事件名或操作” 键盘按下事件（keyCode来判断按得是哪个）<br>@clicck=“事件名或操作”<br>按键修饰符<br>@keyup.enter表示按下回车<br>@keyup.ctrl.enter表示ctrl+回车<br>@keyup.alt.enter表示alt+回车<br>（3）v-for<br>循环每一项在页面中进行显示。可以循环数组，字符串，数字，对象<br>v-for=”item in people” :key=””<br>“ : ”v-bind的简写  绑定数据,每一个循环项目都需要一个唯一的key，作用是性能优化<br>（4）v-if/v-show<br>控制标签的显示和隐藏<br>v-show指令接收一个bool值true/false<br>v-if  是直接删除标签，不在页面中心事了（可以直接销毁组件）<br>v-show 是控制标签的display属性进行显示和隐藏<br>相对来说 v-show 的性能更高一些<br>（5）methods<br>在vue实例中可以访问到的自定义方法都写在这个属性中<br>methods中的方法可以相互调用，也能直接访问data中的数据，需要加上this关键字<br>（6）v-html  绑定一个富文本标签  （富文本编辑器：wangEditor,ueditor,kindeditor）<br>富文本    包含有html标签的字符串文本内容<br>管理后台 ？   是对所有系统中的数据做管理<br>服务器端开发？ java、php、c#、python、ruby、nodejs等<br>调用服务器的一些资源，操作数据库存取数据，写接口，写页面<br>管理后台又叫管理系统，是一个web系统或者一个桌面系统<br>是由开发人员制作的，服务器端开发知识管理后台中的一部分而已<br>还需要前端<br>管理后台可以对系统的数据和用户会员信息做管理，管理后台是个企业内部使用的<br>（7）watch<br>监听一个数据的改变，触发一些列的操作。一个影响多个<br>（8）computed<br>多个影响一个</p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
   </entry>
 </search>
