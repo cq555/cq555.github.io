@@ -28,6 +28,22 @@
 ]]></content>
   </entry>
   <entry>
+    <title>react</title>
+    <url>/2020/09/29/react/</url>
+    <content><![CDATA[<h3 id="REACT"><a href="#REACT" class="headerlink" title="REACT"></a>REACT</h3><p>react 是一个针对视图层的库，使用的是 jsx 语法<br>jsx 语法是一种在 js 中写 html 代码的语法，需要使用 babel 插件做解析<br><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdGpzLm9yZy8=">https://reactjs.org/</span> 官网<br><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9yZWFjdC9yZWFjdC10dXRvcmlhbC5odG1s">https://www.runoob.com/react/react-tutorial.html</span> 菜鸟教程</p>
+<h4 id="class-定义的组件和-function-定义组件的区别"><a href="#class-定义的组件和-function-定义组件的区别" class="headerlink" title="class 定义的组件和 function 定义组件的区别"></a>class 定义的组件和 function 定义组件的区别</h4><p>（1）在 16.8 之前的 react 中 funciton 定义的组件不能拥有局部状态和生命周期，是一种无状态组件<br>（2）16.8 之后的 react 中新增了 hooks 可以在 function 定义的组件中模拟局部状态和生命周期<br>（3）function 定义的组件没有 this 执行问题，代码可读性更强<br>（4）class 定义的组件写法上更接近于强类型语言的语法<br>（5）class 定义的组件中有很多的生命周期钩子函数，<br>（6）function 定义的组件通过 useEffect 副作用来模拟处理生命周期</p>
+<h4 id="把一个数组循环展示"><a href="#把一个数组循环展示" class="headerlink" title="把一个数组循环展示"></a>把一个数组循环展示</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;list.map((item,index)&#x3D;&gt;&#123;</span><br><span class="line">return (</span><br><span class="line">&lt;p className&#x3D;””  key&#x3D;&#123;index&#125;&gt;&#123;item&#125;&lt;&#x2F;p&gt;</span><br><span class="line">)</span><br><span class="line">&#125;)&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="function-定义的组件中"><a href="#function-定义的组件中" class="headerlink" title="function 定义的组件中"></a>function 定义的组件中</h4><p>需要写 const [list , setList] = React.useState([{id: 1, content: “起床”}])<br>然后在方法中写 setList（） 写了之后当 state 数据发生改变之后组件会重新渲染</p>
+<h4 id="组件传参"><a href="#组件传参" class="headerlink" title="组件传参"></a>组件传参</h4><p>（1）父传子 使用 props<br>（2）子传父使用 方法调用<br>useEffect 副作用<br>就是我们做了什么操作之后会引起一些其他的反应<br>参数一 是一个回调函数<br>参数二 表示哪些数据的改变会引起前面回调函数的处理，数组中的任何一项发生改变都会引起回调函数执行<br>如果第二个参数是空数组    那么只有在组件初始化的时候执行一次</p>
+<h4 id="class-定义组件时的-this-指向"><a href="#class-定义组件时的-this-指向" class="headerlink" title="class 定义组件时的 this 指向"></a>class 定义组件时的 this 指向</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">（1） this.clickHandle &#x3D; this.clickHandle.bind(this);&#x2F;&#x2F;改变 this 指向</span><br><span class="line">这种绑定 this 指向的方法是官方推荐写法</span><br><span class="line">组件初始化的时候只会做一次绑定</span><br><span class="line">（2）return &lt;button onClick&#x3D;&#123;this.clickHandle.bind(this)&#125;&gt;&#123;this.state.count&#125;&lt;&#x2F;button&gt;</span><br><span class="line">直接在render的时候执行this绑定</span><br><span class="line">		每一次数据或者属性改变之后this指向绑定的操作都会执行</span><br><span class="line">（3）箭头函数</span><br><span class="line">&lt;button onClick&#x3D;&#123;() &#x3D;&gt; this.clickHandle()&#125;&gt;&#123;this.state.count&#125;&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过-extends-继承在-Component-实现一个组件"><a href="#通过-extends-继承在-Component-实现一个组件" class="headerlink" title="通过 extends 继承在 Component 实现一个组件"></a>通过 extends 继承在 Component 实现一个组件</h4><p>每一个组件都需要有一个 render<br>此方法返回的是当前组件显示的内容</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>redux</title>
     <url>/2020/09/29/redux/</url>
     <content><![CDATA[<h3 id="REDUX"><a href="#REDUX" class="headerlink" title="REDUX"></a>REDUX</h3><p>1、redux是一个全局状态管理工具。他可以个任何一个框架进行结合使用，不一定是react。但是react主要是针对视图层操作的，用来展示内容的，和redux结合使用会更方便一些。</p>
@@ -48,19 +64,11 @@
       </categories>
   </entry>
   <entry>
-    <title>react</title>
-    <url>/2020/09/29/react/</url>
-    <content><![CDATA[<h3 id="REACT"><a href="#REACT" class="headerlink" title="REACT"></a>REACT</h3><p>react 是一个针对视图层的库，使用的是 jsx 语法<br>jsx 语法是一种在 js 中写 html 代码的语法，需要使用 babel 插件做解析<br><span class="exturl" data-url="aHR0cHM6Ly9yZWFjdGpzLm9yZy8=">https://reactjs.org/</span> 官网<br><span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9yZWFjdC9yZWFjdC10dXRvcmlhbC5odG1s">https://www.runoob.com/react/react-tutorial.html</span> 菜鸟教程</p>
-<h4 id="class-定义的组件和-function-定义组件的区别"><a href="#class-定义的组件和-function-定义组件的区别" class="headerlink" title="class 定义的组件和 function 定义组件的区别"></a>class 定义的组件和 function 定义组件的区别</h4><p>（1）在 16.8 之前的 react 中 funciton 定义的组件不能拥有局部状态和生命周期，是一种无状态组件<br>（2）16.8 之后的 react 中新增了 hooks 可以在 function 定义的组件中模拟局部状态和生命周期<br>（3）function 定义的组件没有 this 执行问题，代码可读性更强<br>（4）class 定义的组件写法上更接近于强类型语言的语法<br>（5）class 定义的组件中有很多的生命周期钩子函数，<br>（6）function 定义的组件通过 useEffect 副作用来模拟处理生命周期</p>
-<h4 id="把一个数组循环展示"><a href="#把一个数组循环展示" class="headerlink" title="把一个数组循环展示"></a>把一个数组循环展示</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;list.map((item,index)&#x3D;&gt;&#123;</span><br><span class="line">return (</span><br><span class="line">&lt;p className&#x3D;””  key&#x3D;&#123;index&#125;&gt;&#123;item&#125;&lt;&#x2F;p&gt;</span><br><span class="line">)</span><br><span class="line">&#125;)&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="function-定义的组件中"><a href="#function-定义的组件中" class="headerlink" title="function 定义的组件中"></a>function 定义的组件中</h4><p>需要写 const [list , setList] = React.useState([{id: 1, content: “起床”}])<br>然后在方法中写 setList（） 写了之后当 state 数据发生改变之后组件会重新渲染</p>
-<h4 id="组件传参"><a href="#组件传参" class="headerlink" title="组件传参"></a>组件传参</h4><p>（1）父传子 使用 props<br>（2）子传父使用 方法调用<br>useEffect 副作用<br>就是我们做了什么操作之后会引起一些其他的反应<br>参数一 是一个回调函数<br>参数二 表示哪些数据的改变会引起前面回调函数的处理，数组中的任何一项发生改变都会引起回调函数执行<br>如果第二个参数是空数组    那么只有在组件初始化的时候执行一次</p>
-<h4 id="class-定义组件时的-this-指向"><a href="#class-定义组件时的-this-指向" class="headerlink" title="class 定义组件时的 this 指向"></a>class 定义组件时的 this 指向</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">（1） this.clickHandle &#x3D; this.clickHandle.bind(this);&#x2F;&#x2F;改变 this 指向</span><br><span class="line">这种绑定 this 指向的方法是官方推荐写法</span><br><span class="line">组件初始化的时候只会做一次绑定</span><br><span class="line">（2）return &lt;button onClick&#x3D;&#123;this.clickHandle.bind(this)&#125;&gt;&#123;this.state.count&#125;&lt;&#x2F;button&gt;</span><br><span class="line">直接在render的时候执行this绑定</span><br><span class="line">		每一次数据或者属性改变之后this指向绑定的操作都会执行</span><br><span class="line">（3）箭头函数</span><br><span class="line">&lt;button onClick&#x3D;&#123;() &#x3D;&gt; this.clickHandle()&#125;&gt;&#123;this.state.count&#125;&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="通过-extends-继承在-Component-实现一个组件"><a href="#通过-extends-继承在-Component-实现一个组件" class="headerlink" title="通过 extends 继承在 Component 实现一个组件"></a>通过 extends 继承在 Component 实现一个组件</h4><p>每一个组件都需要有一个 render<br>此方法返回的是当前组件显示的内容</p>
-]]></content>
+    <title>美好的一天</title>
+    <url>/2020/10/09/%E7%BE%8E%E5%A5%BD%E7%9A%84%E4%B8%80%E5%A4%A9/</url>
+    <content><![CDATA[<h4 id="Love-is-to-put-others-more-important-than-yourself"><a href="#Love-is-to-put-others-more-important-than-yourself" class="headerlink" title="Love is to put others more important than yourself."></a>Love is to put others more important than yourself.</h4>]]></content>
       <categories>
-        <category>学习</category>
+        <category>心情</category>
       </categories>
   </entry>
   <entry>
@@ -75,14 +83,6 @@
 ]]></content>
       <categories>
         <category>学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>美好的一天</title>
-    <url>/2020/10/09/%E7%BE%8E%E5%A5%BD%E7%9A%84%E4%B8%80%E5%A4%A9/</url>
-    <content><![CDATA[<h4 id="Love-is-to-put-others-more-important-than-yourself"><a href="#Love-is-to-put-others-more-important-than-yourself" class="headerlink" title="Love is to put others more important than yourself."></a>Love is to put others more important than yourself.</h4>]]></content>
-      <categories>
-        <category>心情</category>
       </categories>
   </entry>
 </search>
